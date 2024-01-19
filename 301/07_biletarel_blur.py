@@ -1,5 +1,6 @@
 import cv2 as cv
-# filtreeelme sırasında kullanılan  her bir piksel komşusunun çapı. sigma color= renk uzayındaki değeri verir. sayı ne kadar uzak olursa birbirine uzak renkler karışmaya başlar
+# filtreleme sırasında kullanılan  her bir piksel komşusunun çapı.
+#sigma color= renk uzayındaki değeri verir. sayı ne kadar uzak olursa birbirine uzak renkler karışmaya başlar
 # sigma space sayı ne kadar büyük olursa daha fazla piksel birbirine karıştırılıyor olucak
 
 import cv2 as cv
