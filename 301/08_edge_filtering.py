@@ -12,7 +12,7 @@ h, w = src.shape[:2]
 
 dst = cv.edgePreservingFilter(src, sigma_s=100, sigma_r=0.1, flags=cv.RECURS_FILTER)
 #sigma_s 0 ile 200 arasında değer alır. Bulurlama şiddetidir.
-#sigma_r 0 ile 1 arasında değer alır. Kenar bölgelerin dikkate alınıp alınmayacağını ifade eder.
+#sigma_r 0 ile 1 arasında değer alır. Kenar bölgelerin ne kadar dikkate alınıp alınmayacağını ifade eder.
 
 result = np.zeros([h, w * 2, 3], dtype=src.dtype)
 result[0:h, 0:w, :] = src
