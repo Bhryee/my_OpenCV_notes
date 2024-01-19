@@ -1,8 +1,4 @@
 import cv2 as cv
-# filtreleme sırasında kullanılan  her bir piksel komşusunun çapı.
-#sigma color= renk uzayındaki değeri verir. sayı ne kadar uzak olursa birbirine uzak renkler karışmaya başlar
-# sigma space sayı ne kadar büyük olursa daha fazla piksel birbirine karıştırılıyor olucak
-
 import cv2 as cv
 import numpy as np
 
@@ -14,11 +10,9 @@ cv.waitKey(4000)
 
 h, w = src.shape[:2]
 dst = cv.bilateralFilter(src, 0, 100, 5)
-"""filtreleme sırasında kullanılan her bir piksel komşusunun çapı
-
-   sigma colour = renk uzayındaki değerdir. sayı ne kadar uzak olursa
-   birbirine uzak renkler karışmaya başlar.
-   sigma space = sayı ne kadar büyük olursa daha fazla piksel birbirine karıştırılır."""
+""" 0 : filtreleme sırasında kullanılan her bir piksel komşusunun çapı
+    100 : sigma colour = renk uzayındaki değerdir.Değer ne kadar uzak olursa birbirine uzak renkler o kadar karışmaya başlar.
+    5 : sigma space = sayı ne kadar büyük olursa o kadar fazla piksel birbirine karıştırılır."""
 
 result = np.zeros([h, w * 2, 3], dtype=src.dtype)
 result[0:h, 0:w, :] = src
