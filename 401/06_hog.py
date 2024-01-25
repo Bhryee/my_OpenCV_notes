@@ -28,7 +28,7 @@ rects, weights = hog.detectMultiScale(src,
            ve daha küçük nesneler tespit edilebilir."""
 
 for x, y, w, h in rects:
-    cv.rectangle(src, (x, y), (x + w, y + h), (0, 255, 0), 2)
+    cv.rectangle(src, (x, y), (x + w, y + h), (0, 255, 0), 2) #dikdörtgen çizme işlemi
 
 
 cv.imshow("hog", src)
