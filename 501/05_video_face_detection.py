@@ -1,9 +1,9 @@
 import cv2 as cv
 #modelin katmanlarının ağırlıklarının bilgilerinin olduğu dosya
-bin_model = "/Users/bahriyeisgor/Desktop/OpenCV/model/bvlc_googlenet.caffemodel"
+bin_model = ".../bvlc_googlenet.caffemodel"
 
 #model mimarisine ilişkin katmanlarla ilgili bilgilerin olduğu dosya
-protxt = "/Users/bahriyeisgor/Desktop/OpenCV/model/prototxt/deploy.prototxt"
+protxt = ".../deploy.prototxt"
 
 net = cv.dnn.readNet(bin_model, protxt)
 
