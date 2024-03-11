@@ -3,8 +3,8 @@
 import cv2 as cv
 import numpy as np
 
-bin_model = "/Users/bahriyeisgor/Desktop/OpenCV/model/bvlc_googlenet.caffemodel"
-protxt = "/Users/bahriyeisgor/Desktop/OpenCV/model/prototxt/deploy.prototxt"
+bin_model = ".../bvlc_googlenet.caffemodel"
+protxt = ".../deploy.prototxt"
 
 net = cv.dnn.readNet(bin_model, protxt)
 
@@ -22,7 +22,7 @@ for i in range(len(layer_names)):
     print(f"Katman ID: {layer_id}, türü: {layer.type}, ismi: {layer_names[i]}")
 
 
-with open("/Users/bahriyeisgor/Desktop/OpenCV/classification_classes_ILSVRC2012.txt", "rt") as f:
+with open(".../classification_classes_ILSVRC2012.txt", "rt") as f:
     classes = f.read().split('/n')
 
 net = cv.dnn.readNetFromCaffe(bin_model, protxt)
